@@ -88,3 +88,11 @@
         background-image: url(./003_MOSCOW_HFC.jpg)
     }
 }
+
+#app {
+    border: 1px solid #FFC;
+    z-index: 1;
+    padding: 20px;
+    margin: 220px;
+    color: #FFC;
+}
