@@ -42,7 +42,7 @@ Router.prototype = {
     rootElem: undefined,
     constructor(routes) {
         this.routes = routes;
-        this.rootElem = document.getElementById('app');
+        this.rootElem = document.getElementById('content');
     },
     init: function () {
         var r = this.routes;
@@ -57,7 +57,7 @@ Router.prototype = {
         if (window.location.hash.length > 0) {
             for (var i = 0, length = r.length; i < length; i++) {
                 var route = r[i];
-                if(route.isActiveRoute(window.location.hash)) {
+                if(route.isActiveRoute(window.location.hash.substr(1))) {
                     scope.goToRoute(route.htmlPath);
                 }
             }
@@ -88,7 +88,7 @@ Router.prototype = {
 (function () {
     function init() {
         var router = new Router([
-            new Route('index', '../components/index.html', true),
+            new Route('index', '../components/index.html'),
             new Route('london', '../components/london.html'),            
             new Route('geneva', '../components/geneva.html'),
             new Route('moscow', '../components/moscow.html'),
