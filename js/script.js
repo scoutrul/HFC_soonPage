@@ -1,12 +1,14 @@
 var genevaBtn = document.getElementById('geneva');
 var londonBtn = document.getElementById('london');
 var moscowBtn = document.getElementById('moscow');
+var app = document.getElementById('app');
 var buttons = [genevaBtn, londonBtn, moscowBtn];
 
 (function(elements) {
     if(!elements) return;
     
     var clearBtns = function(){
+        app.className = "clear";
         elements.forEach(function(btn){
                 btn.className = "";
             }
