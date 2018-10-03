@@ -41,7 +41,7 @@ body {
     background-image: url(../images/london.jpg);
     background-size: cover;
     animation: slider 15s ease-in-out 5s infinite;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 #app.clear {
     background: none;
@@ -59,7 +59,6 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    animation-fill-mode: forwards;
 }
 
 #slider.london {
@@ -85,14 +84,17 @@ body {
 }
 
 @keyframes slider {
-    33% {
+    0% {
         background-image: url(../images/london.jpg)
     }
-    66% {
+    33% {
         background-image: url(../images/geneva.jpg)
     }
-    99% {
+    66% {
         background-image: url(../images/moscow.jpg)
+    }
+    100% {
+        background-image: url(../images/london.jpg)
     }
 }
 
