@@ -1,10 +1,12 @@
-var keyframe = document.getElementById('keyframe');
-var navigation = document.getElementById('nav');
 var genevaBtn = document.getElementById('geneva');
 var londonBtn = document.getElementById('london');
 var moscowBtn = document.getElementById('moscow');
+var scene = document.getElementById('scene');
+console.log(scene);
 
-var addEventToBtn = function(elements) {
+(function(elements) {
+    if(!elements) return;
+    
     console.log(elements);
     
     var addElement = function(element){
@@ -13,5 +15,4 @@ var addEventToBtn = function(elements) {
     for(var i = 0; i < elements.length; i++){
         elements[i].addEventListener('click', addElement, false);
     };
-};
-addEventToBtn([genevaBtn, londonBtn, moscowBtn]);
+})([genevaBtn, londonBtn, moscowBtn]);
