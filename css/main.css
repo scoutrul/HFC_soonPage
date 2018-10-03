@@ -1,0 +1,124 @@
+@font-face {
+    font-family: PFDinDisplayPro;
+    src:    
+        url("../fonts/PFDinDisplayPro.ttf") format("truetype"),
+        url("../fonts/PFDinDisplayPro.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: PFDinDisplayPro;
+}
+
+#cach {
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #2c2c32;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/001_LONDON_HFC.jpg);
+}
+
+#slider {
+    background-image: url(../images/001_LONDON_HFC.jpg);
+    animation: slider 15s ease-in-out 5s infinite;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#scene {
+    animation: fadeIn 4s ease-in 1s 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+}
+
+@keyframes slider {
+    0% {
+        opacity: 1;
+        background-image: url(../images/001_LONDON_HFC.jpg)
+    }
+    33% {
+        opacity: 1;
+        background-image: url(../images/001_GENEVA_HFC.jpg)
+    }
+    66% {
+        opacity: 1;
+        background-image: url(../images/003_MOSCOW_HFC.jpg)
+    }
+}
+
+#logo {
+    z-index: 1;
+    max-width: 100%;
+    min-width: 300px;
+}
+
+#logo img {
+    margin: auto;
+}
+
+#nav {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 640px;
+}
+#nav li {
+    display: flex;
+    justify-content: center;
+}
+#nav li.devider {
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    margin: 24px;
+    background-color: #e4b76a;
+}
+#nav li a {
+    color: #e4b76a;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 150%;
+    transition: .5s ease;
+    letter-spacing: 3px;
+}
+#nav li a:hover {
+    color: #55565a;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
