@@ -81,7 +81,7 @@ body {
     animation-fill-mode: forwards;
     opacity: 0;
     position: relative;
-    max-width: 640px;
+    max-width: calc(100vw - 40px);
 }
 
 @keyframes slider {
@@ -129,6 +129,8 @@ body {
 
 #logo {
     text-align: center;
+    max-width: 640px;
+    margin: auto;
 }
 
 #logo img {
@@ -141,6 +143,7 @@ body {
     align-items: center;
     justify-content: space-around;
     max-width: 640px;
+    margin: auto;
 }
 #nav li {
     display: flex;
@@ -156,8 +159,8 @@ body {
     width: 6px;
     height: 6px;
     background-color: #e4b76a;
-
 }
+
 #nav li a {
     color: #e4b76a;
     text-transform: uppercase;
