@@ -55,14 +55,14 @@ Router.prototype = {
     },
     hasChanged: function(scope, r){
         if (window.location.hash.length > 0) {
-            for (var i = 0, length = r.length; i < length; i++) {
+            for (var i = 0; i < r.length; i++) {
                 var route = r[i];
                 if(route.isActiveRoute(window.location.hash.substr(1))) {
                     scope.goToRoute(route.htmlPath);
                 }
             }
         } else {
-            for (var i = 0, length = r.length; i < length; i++) {
+            for (var i = 0; i < r.length; i++) {
                 var route = r[i];
                 if(route.default) {
                     scope.goToRoute(route.htmlPath);
@@ -88,10 +88,10 @@ Router.prototype = {
 (function () {
     function init() {
         var router = new Router([
-            new Route('index', '../components/index.html'),
-            new Route('london', '../components/london.html'),            
-            new Route('geneva', '../components/geneva.html'),
-            new Route('moscow', '../components/moscow.html'),
+            new Route('index', './ref/components/index.html'),
+            new Route('london', './ref/components/london.html'),            
+            new Route('geneva', './ref/components/geneva.html'),
+            new Route('moscow', './ref/components/moscow.html'),
         ]);
     }
     init();
