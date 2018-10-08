@@ -37,7 +37,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-image: url(../images/london.jpg);
     background-size: cover;
     animation: slider 15s ease-in-out 5s infinite;
@@ -88,6 +87,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     overflow: auto;
+    margin: 0 auto;
     justify-content: center;
 }
 
@@ -146,6 +146,7 @@ body {
 
 #logo img {
     width: 100%;
+    margin: 0 auto;
 }
 
 #nav {
@@ -208,6 +209,10 @@ body {
     }
     #slider.moscow {
         background-image: url(../images/moscow_mob.png);
+    }
+
+    #logo {
+        min-height: auto;
     }
     #logo img  {
         width: 90%;
